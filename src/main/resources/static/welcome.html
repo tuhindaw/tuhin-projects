@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Tuhin</title>
+
+    <script type="text/javascript" language="javascript">
+        function send()
+        {
+            var urlvariable;
+
+            urlvariable = "text";
+
+            var ItemJSON;
+
+            ItemJSON = '{\n' +
+                '    "setOfStrings": [\n' +
+                '        {\n' +
+                '            "value": "comcast"\n' +
+                '        },\n' +
+                '        {\n' +
+                '            "value": "comcastic"\n' +
+                '        },\n' +
+                '        {\n' +
+                '            "value": "broadcaster"\n' +
+                '        }\n' +
+                '    ]\n' +
+                '}';
+
+            URL = "http://localhost:8080/api/lcs/substring";
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
+            xmlhttp.open("POST", URL, false);
+            xmlhttp.setRequestHeader("Content-Type", "application/json");
+            xmlhttp.onreadystatechange = callbackFunction(xmlhttp);
+            xmlhttp.send(ItemJSON);
+            alert(xmlhttp.responseText);
+            document.getElementById("div").innerHTML = xmlhttp.statusText + ":" + xmlhttp.status + "<BR><textarea rows='100' cols='100'>" + xmlhttp.responseText + "</textarea>";
+        }
+
+        function callbackFunction(xmlhttp)
+        {
+            //alert(xmlhttp.responseXML);
+        }
+    </script>
+</head>
+
+<body id='bod'><button type="submit" onclick="javascript:send()">call</button>
+<div id='div'>
+
+</div></body>
+
+</html>
