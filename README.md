@@ -56,7 +56,8 @@ Sample output:-
 
 # RESTful Endpoint - Test using application home page
 This application has a homepage that contains a form that when submitted makes the POST request. The home page can be accessed by the below URL 
- http://localhost:8080/welcome.html. As of now the validations can not be tested through the homepage.
+ http://localhost:8080/welcome.html 
+ As of now validations can not be tested through the homepage.
 
 # Validation
 There are some request validation in place around this endpoint. For example, the input Strings in the request body must be unique otherwise
@@ -78,5 +79,9 @@ Sample Request:-
 
 Sample Response:-
 BadRequestException (Http 400) 
+
+# Script - to test functionality
+Also created script/stand alone JAVA application that exercises and verifies the functionality of server by making HTTP requests and 
+verifying that the responses are appropriate. The details of this script are provided separately.
 
 
