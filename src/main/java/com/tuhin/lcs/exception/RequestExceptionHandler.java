@@ -11,7 +11,7 @@ public class RequestExceptionHandler {
     @ExceptionHandler(value = BadLCSRequestException.class)
     public ResponseEntity<Object> exception(BadLCSRequestException
                                                     exception) {
-        return new ResponseEntity<>("Input strings can't be empty or can't contain duplicate", HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
 }
