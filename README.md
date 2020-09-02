@@ -1,8 +1,8 @@
 #GIT URL
-git@github.com:tuhindaw/tuhin-projects.git
+https://github.com/tuhindaw/tuhin-projects.git
 
 Clone the project using below command
-git clone git@github.com:tuhindaw/tuhin-projects.git
+git clone https://github.com/tuhindaw/tuhin-projects.git
 
 #RESTful Microservice-description
 This is a Spring Boot application (2.3.3.RELEASE) project that exposes an HTTP POST REST endpoint. This endpoint accepts Set of Strings in a specific JSON format
