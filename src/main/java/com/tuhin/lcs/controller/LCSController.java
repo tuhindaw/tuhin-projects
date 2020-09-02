@@ -36,13 +36,13 @@ public class LCSController {
         return findLongestSubstring(request);
     }
 
-    public Response findLongestSubstring(Request request){
+    private Response findLongestSubstring(Request request){
         List<String> inputs = request.getSetOfStrings().stream().map(t->t.value).collect(Collectors.toList());
         return createResponse(findstem(inputs));
     }
 
-    // function to find longest common substring) from the string array
-    public String findstem(List<String> input)
+    // Method to find longest common substring) from the string array
+    private String findstem(List<String> input)
     {
         int n = input.size();
 
@@ -74,7 +74,7 @@ public class LCSController {
         return res;
     }
 
-    public Response createResponse(String res){
+    private Response createResponse(String res){
         Response response = new Response();
         Set<Lcs> sets = new HashSet<>();
         Lcs lcs = new Lcs(res);
