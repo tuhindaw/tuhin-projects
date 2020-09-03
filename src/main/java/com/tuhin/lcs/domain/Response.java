@@ -16,4 +16,16 @@ public class Response {
         this.lcs = lcs;
     }
 
+    public static class Lcs {
+
+        public Lcs() {}
+        @JsonProperty("value")
+        public String value;
+
+        public Lcs(String subString){
+            this.value = subString;
+        }
+
+    }
+
 }

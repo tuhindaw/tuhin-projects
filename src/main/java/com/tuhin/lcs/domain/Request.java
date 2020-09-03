@@ -15,4 +15,9 @@ public class Request {
         this.setOfStrings = setOfStrings;
     }
 
+    public static class SetOfString {
+        @JsonProperty("value")
+        public String value;
+    }
+
 }
