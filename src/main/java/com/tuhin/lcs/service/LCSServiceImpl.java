@@ -1,6 +1,5 @@
 package com.tuhin.lcs.service;
 
-import com.tuhin.lcs.domain.Lcs;
 import com.tuhin.lcs.domain.Request;
 import com.tuhin.lcs.domain.Response;
 import org.springframework.stereotype.Service;
@@ -53,8 +52,8 @@ public class LCSServiceImpl implements LCSService{
 
     private Response createResponse(String res){
         Response response = new Response();
-        Set<Lcs> sets = new HashSet<>();
-        Lcs lcs = new Lcs(res);
+        Set<Response.Lcs> sets = new HashSet<>();
+        Response.Lcs lcs = new Response.Lcs(res);
         sets.add(lcs);
         response.setLcs(sets);
         return response;
